@@ -1,6 +1,8 @@
 #!/bin/bash
 read x y
 
+echo $x + $y = $(($x + $y))
+
 if [ $x -lt $y ]; then
    echo "x less than y"
 elif [ $x -eq $y ]; then
