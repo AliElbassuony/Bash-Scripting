@@ -1,12 +1,18 @@
 #!/bin/bash
 read x y
+read -t 3 z
+
+n="than"
+q="equal"
 
 echo $x + $y = $(($x + $y))
 
 if [ $x -lt $y ]; then
-   echo "x less than y"
+   printf ""
 elif [ $x -eq $y ]; then
-   echo "Equal"
+   echo $q
+elif [ -z $z ]; then
+	echo "Not Exist"
 else
-   echo "x greater than y"
+   printf "%d greater $s $d" $x $n $y
 fi
