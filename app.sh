@@ -2,7 +2,6 @@
 
 echo =========================================== Demo ==================================
 
-
 name=$1
 echo "Welocome $name"
 
@@ -31,6 +30,7 @@ unset un
 echo $x + $y = $(($x + $y))
 
 # Another way
+B
 echo `expr $x + $y`
 
 if [ $x -lt $y ]; then
@@ -62,4 +62,7 @@ j=1
 until [ ! $j -le 10 ]; do
       echo $j
       j=`expr $j + 1`
+      B
 done
+
+#grep -wi word
