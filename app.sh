@@ -30,7 +30,6 @@ unset un
 echo $x + $y = $(($x + $y))
 
 # Another way
-B
 echo `expr $x + $y`
 
 if [ $x -lt $y ]; then
@@ -62,20 +61,19 @@ j=1
 until [ ! $j -le 10 ]; do
       echo $j
       j=`expr $j + 1`
-      B
 done
 
 #grep -wi word
 
 
 echo ====================== day 2 =======================
-<<day2
+<< day2
 
 useradd ali ; echo $?
 
 grep -w  name |
 
-id username 
+#id username 
 check=$(id ali)
 
 echo $check
@@ -85,6 +83,7 @@ check=$(id user 2> /dev/null)
 check=$(id $1 2> /dev/null)
 
 if [ -z $check ]
+B
 then
 	echo user doesnot exist
 else
@@ -152,6 +151,7 @@ to store ip in variable
 
 =========================
 ip=`ifconfig | grep inet | head -1 | cut -d " " -f10`
+A
 echo $ip
 ====================================================
 $ you can run your script using ./useradd inputfile 	outputfile
@@ -194,6 +194,7 @@ sed => stream editor - like => nano - vim | none interactive | none destructive
 ================================================================================
 sed 'command' filename
 command => 1- address 2-action
+
 address => 1- lines number 2-regex
 action => 1- substitute 2-delete 3-print
 ===============================================
@@ -205,6 +206,7 @@ sed 's/unix/linux' file
 
  all occurences
  
+
 
  sed 's/u/c/g' file
 
@@ -238,24 +240,16 @@ sed 's/c/a/g' file > out
 
 sed -i 's/c/a/g' file => edit in same file
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 day2
 
+echo ================== day 3 =============================
+<< day3
+
+dos2unix file
 
 
+day3
 
 
-
+awk "BEGIN { i=0 } { i++ } END { print i }" file 
 
