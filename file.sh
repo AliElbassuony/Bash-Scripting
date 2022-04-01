@@ -2,7 +2,8 @@
 
 #Using for
 
-#for i in $* ;do
+#for i in $* 
+#do
 #	echo $*
 #	shift
 #done
